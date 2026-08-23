@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Staff Management</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <h1>👥 Staff Management</h1>
+    <p>Staff Sales Management</p>
+  </header>
+
+  <!-- Dashboard -->
+  <section class="dashboard">
+
+    <div class="dash-card">
+      <span>👥</span>
+      <b id="totalStaff">0</b>
+      <small>Total Staff</small>
+    </div>
+
+    <div class="dash-card">
+      <span>📊</span>
+      <b id="totalSales">0</b>
+      <small>Total Sales</small>
+    </div>
+
+  </section>
+
+  <!-- Add Staff -->
+  <button class="add-btn" onclick="openAddForm()">
+    ＋ Add Staff
+  </button>
+
+  <!-- Search -->
+  <input
+    type="text"
+    id="search"
+    class="search"
+    placeholder="🔎 Search Staff..."
+    oninput="showStaff()"
+  >
+
+  <!-- Staff List -->
+  <div id="staffList"></div>
+
+</div>
+
+
+<!-- FORM MODAL -->
+
+<div id="modal" class="modal">
+
+  <div class="form-box">
+
+    <h2 id="formTitle">Add Staff</h2>
+
+    <input id="staffId" placeholder="Staff ID">
+
+    <input id="staffName" placeholder="Staff Name">
+
+    <input id="staffDob" type="date">
+
+    <label>📸 Staff Photo</label>
+
+    <input
+      id="staffPhoto"
+      type="file"
+      accept="image/*"
+    >
+
+    <h3>Sales</h3>
+
+    <input
+      id="dg"
+      type="number"
+      min="0"
+      placeholder="DG Super App"
+    >
+
+    <input
+      id="tv360"
+      type="number"
+      min="0"
+      placeholder="TV360"
+    >
+
+    <input
+      id="sim"
+      type="number"
+      min="0"
+      placeholder="SIM"
+    >
+
+    <input
+      id="gold"
+      type="number"
+      min="0"
+      placeholder="Gold Account"
+    >
+
+    <button class="save-btn" onclick="saveStaff()">
+      💾 Save
+    </button>
+
+    <button class="cancel-btn" onclick="closeForm()">
+      Cancel
+    </button>
+
+  </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
